@@ -24,7 +24,7 @@ function renderTheme() {
 }
 
 document.querySelector("#increment").addEventListener("click", () => {
-  count += 1;
+  count += 2;
   renderCount();
 });
 
