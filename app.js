@@ -55,6 +55,14 @@ themeToggle.addEventListener("click", () => {
   renderTheme();
 });
 
+document.querySelector("#clear-saved").addEventListener("click", () => {
+  count = 0;
+  renderCount();
+  localStorage.removeItem("notes");
+  renderNote();
+  document.querySelector("#clear-status").textContent = "Saved data cleared.";
+});
+
 renderCount();
 renderNote();
 renderTheme();
