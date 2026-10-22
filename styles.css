@@ -137,6 +137,21 @@ button.ghost {
   border: 1px solid var(--line);
 }
 
+.step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: auto;
+  color: var(--muted);
+}
+
+.step input {
+  width: 72px;
+  flex: 0 0 72px;
+  text-align: center;
+}
+
+.history,
 .saved {
   min-height: 1.4em;
   margin: 14px 0 0;
