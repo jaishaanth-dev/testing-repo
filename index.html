@@ -25,8 +25,13 @@
         <div class="row">
           <button type="button" id="decrement" aria-label="Decrease count">−</button>
           <button type="button" id="increment" aria-label="Increase count">+</button>
+          <label class="step" for="step">
+            Step
+            <input id="step" name="step" type="number" min="1" max="100" value="1" />
+          </label>
           <button type="button" id="reset" class="ghost">Reset</button>
         </div>
+        <p class="history" id="history">No steps yet.</p>
       </section>
 
       <section class="card" aria-labelledby="note-title">
