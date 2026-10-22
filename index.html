@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Testing Playground</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <div>
+          <p class="eyebrow">Demo app</p>
+          <h1>Testing Playground</h1>
+          <p class="lede">A small page for clicking, typing, and checking that the app responds.</p>
+        </div>
+        <button type="button" id="theme-toggle" class="ghost" aria-pressed="false">
+          Dark mode
+        </button>
+      </header>
+
+      <section class="card" aria-labelledby="counter-title">
+        <h2 id="counter-title">Counter</h2>
+        <p class="count" id="count" aria-live="polite">0</p>
+        <div class="row">
+          <button type="button" id="decrement" aria-label="Decrease count">−</button>
+          <button type="button" id="increment" aria-label="Increase count">+</button>
+          <button type="button" id="reset" class="ghost">Reset</button>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="note-title">
+        <h2 id="note-title">Note</h2>
+        <form id="note-form">
+          <label for="note">Leave a short note</label>
+          <input id="note" name="note" type="text" maxlength="80" placeholder="Type something to test…" autocomplete="off" />
+          <button type="submit">Save note</button>
+        </form>
+        <p class="saved" id="saved-note">No note saved yet.</p>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
