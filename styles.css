@@ -137,6 +137,13 @@ button.ghost {
   border: 1px solid var(--line);
 }
 
+.hint {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.9rem;
+}
+
 .saved {
   min-height: 1.4em;
   margin: 14px 0 0;
