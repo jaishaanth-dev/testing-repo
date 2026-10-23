@@ -3,42 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Testing Playground</title>
+    <title>Shop</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="app">
       <header class="header">
         <div>
-          <p class="eyebrow">Demo app</p>
-          <h1>Testing Playground</h1>
-          <p class="lede">A small page for clicking, typing, and checking that the app responds.</p>
+          <p class="eyebrow">Demo shop</p>
+          <h1 id="title">Shop</h1>
+          <p class="lede">Pick a product and add it to the cart.</p>
         </div>
-        <button type="button" id="theme-toggle" class="ghost" aria-pressed="false">
-          Dark mode
-        </button>
+        <p class="saved">Cart <span id="cart-count">0</span></p>
       </header>
-
-      <section class="card" aria-labelledby="counter-title">
-        <h2 id="counter-title">Counter</h2>
-        <p class="count" id="count" aria-live="polite">0</p>
-        <div class="row">
-          <button type="button" id="decrement" aria-label="Decrease count">−</button>
-          <button type="button" id="increment" aria-label="Increase count">+</button>
-          <button type="button" id="reset" class="ghost">Reset</button>
+      <nav class="nav">
+        <a href="index.html">Shop</a>
+        <a href="cart.html">Cart</a>
+        <a href="orders.html">Orders</a>
+        <a href="account.html">Account</a>
+      </nav>
+      <section class="card">
+        <h2 id="title">Products</h2>
+        <div class="products">
+          <article class="product">
+            <h3>Mug</h3>
+            <p class="saved">$12</p>
+            <label for="qty-mug">Quantity</label>
+            <input id="qty-mug" type="number" value="1" min="1" />
+            <button type="button" id="add-mug" data-id="mug" data-name="Mug" data-price="12">Add</button>
+          </article>
+          <article class="product">
+            <h3>Cup</h3>
+            <p class="saved">$8</p>
+            <label for="qty-cup">Quantity</label>
+            <input id="qty-cup" type="number" value="1" min="1" />
+            <button type="button" id="add-cup" data-id="cup" data-name="Cup" data-price="8">Add</button>
+          </article>
+          <article class="product">
+            <h3>Poster</h3>
+            <p class="saved">$15</p>
+            <label for="qty-poster">Quantity</label>
+            <input id="qty-poster" type="number" value="1" min="1" />
+            <button type="button" id="add-poster" data-id="poster" data-name="Poster" data-price="15">Add</button>
+          </article>
         </div>
-      </section>
-
-      <section class="card" aria-labelledby="note-title">
-        <h2 id="note-title">Note</h2>
-        <form id="note-form">
-          <label for="note">Leave a short note</label>
-          <input id="note" name="note" type="text" maxlength="80" placeholder="Type something to test…" autocomplete="off" />
-          <button type="submit">Save note</button>
-        </form>
-        <p class="saved" id="saved-note">No note saved yet.</p>
+        <p class="saved" id="shop-status"></p>
       </section>
     </main>
-    <script src="app.js"></script>
+    <script src="pages/home.js"></script>
   </body>
 </html>

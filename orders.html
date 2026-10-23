@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Orders</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <div>
+          <p class="eyebrow">Demo shop</p>
+          <h1>Orders</h1>
+          <p class="lede">Orders saved by the shop server.</p>
+        </div>
+      </header>
+      <nav class="nav">
+        <a href="index.html">Shop</a>
+        <a href="cart.html">Cart</a>
+        <a href="orders.html">Orders</a>
+        <a href="account.html">Account</a>
+      </nav>
+      <section class="card">
+        <h2>Recent</h2>
+        <div class="row">
+          <button type="button" id="refresh">Refresh</button>
+          <button type="button" id="cancel" class="ghost">Cancel latest</button>
+        </div>
+        <ul id="order-list"></ul>
+        <p class="saved" id="order-status"></p>
+      </section>
+    </main>
+    <script src="pages/orders.js"></script>
+  </body>
+</html>
