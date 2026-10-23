@@ -95,6 +95,29 @@ label,
   font-variant-numeric: tabular-nums;
 }
 
+.level {
+  position: relative;
+  height: 14px;
+  border-radius: 99px;
+  background: var(--line);
+  overflow: hidden;
+}
+
+.level span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  background: var(--accent);
+}
+
+.hint {
+  margin: 10px 0 16px;
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.9rem;
+}
+
 .row,
 form {
   display: flex;
