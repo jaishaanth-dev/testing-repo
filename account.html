@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Account</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <div>
+          <p class="eyebrow">Demo shop</p>
+          <h1>Account</h1>
+          <p class="lede">Balance for this browser session.</p>
+        </div>
+      </header>
+      <nav class="nav">
+        <a href="index.html">Shop</a>
+        <a href="cart.html">Cart</a>
+        <a href="orders.html">Orders</a>
+        <a href="account.html">Account</a>
+      </nav>
+      <section class="card">
+        <h2>Balance</h2>
+        <p class="count" id="balance">100</p>
+        <form id="withdraw-form">
+          <label for="amount">Withdraw</label>
+          <input id="amount" name="amount" type="number" min="1" value="40" />
+          <button type="button" id="withdraw">Withdraw</button>
+        </form>
+        <p class="saved" id="account-status"></p>
+      </section>
+    </main>
+    <script src="pages/account.js"></script>
+  </body>
+</html>
