@@ -1,13 +1,24 @@
+import { goalMessage } from "./counter.js";
+
 const countEl = document.querySelector("#count");
 const noteInput = document.querySelector("#note");
 const savedNote = document.querySelector("#saved-note");
 const themeToggle = document.querySelector("#theme-toggle");
+const goalInput = document.querySelector("#goal");
+const goalStatus = document.querySelector("#goal-status");
 
 let count = Number(localStorage.getItem("count") || 0);
 
 function renderCount() {
   countEl.textContent = String(count);
   localStorage.setItem("count", String(count));
+  renderGoal();
+}
+
+function renderGoal() {
+  const goal = localStorage.getItem("goal");
+  goalInput.value = goal ?? "";
+  goalStatus.textContent = goalMessage(count, goal);
 }
 
 function renderNote() {
@@ -36,6 +47,20 @@ document.querySelector("#decrement").addEventListener("click", () => {
 document.querySelector("#reset").addEventListener("click", () => {
   count = 0;
   renderCount();
+});
+
+document.querySelector("#goal-form").addEventListener("submit", (event) => {
+  event.preventDefault();
+  const raw = goalInput.value.trim();
+  if (raw === "") {
+    localStorage.removeItem("goal");
+  } else if (!Number.isFinite(Number(raw))) {
+    goalStatus.textContent = "Enter a number.";
+    return;
+  } else {
+    localStorage.setItem("goal", String(Number(raw)));
+  }
+  renderGoal();
 });
 
 document.querySelector("#note-form").addEventListener("submit", (event) => {

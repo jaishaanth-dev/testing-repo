@@ -27,6 +27,12 @@
           <button type="button" id="increment" aria-label="Increase count">+</button>
           <button type="button" id="reset" class="ghost">Reset</button>
         </div>
+        <form id="goal-form">
+          <label for="goal">Goal</label>
+          <input id="goal" name="goal" type="number" inputmode="numeric" placeholder="Set a goal" />
+          <button type="submit">Set goal</button>
+        </form>
+        <p class="saved" id="goal-status">No goal set.</p>
       </section>
 
       <section class="card" aria-labelledby="note-title">
@@ -39,6 +45,6 @@
         <p class="saved" id="saved-note">No note saved yet.</p>
       </section>
     </main>
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
   </body>
 </html>

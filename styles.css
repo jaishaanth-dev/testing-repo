@@ -142,6 +142,10 @@ button.ghost {
   margin: 14px 0 0;
 }
 
+#goal-form {
+  margin-top: 16px;
+}
+
 @media (max-width: 640px) {
   .header {
     flex-direction: column;
