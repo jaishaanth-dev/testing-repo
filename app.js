@@ -8,6 +8,20 @@ let count = Number(localStorage.getItem("count") || 0);
 function renderCount() {
   countEl.textContent = String(count);
   localStorage.setItem("count", String(count));
+  const span = 10;
+  const clamped = Math.max(-span, Math.min(span, count));
+  const magnitude = (Math.abs(clamped) / span) * 50;
+  const fill = document.querySelector("#level-fill");
+  fill.style.width = magnitude + "%";
+  fill.style.marginLeft = clamped >= 0 ? "50%" : 50 - magnitude + "%";
+  const label = document.querySelector("#level-label");
+  if (count === 0) {
+    label.textContent = "Level 0";
+  } else if (count > 0) {
+    label.textContent = "Above zero by " + count;
+  } else {
+    label.textContent = "Below zero by " + Math.abs(count);
+  }
 }
 
 function renderNote() {
